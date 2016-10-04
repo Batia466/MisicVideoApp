@@ -17,6 +17,7 @@
 		C465291D1CD8B17C0064A6E2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465291C1CD8B17C0064A6E2 /* APIManager.swift */; };
 		C465DECC1CE0A32E000B92E9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465DECB1CE0A32E000B92E9 /* Constants.swift */; };
 		C465DECE1CE0A55B000B92E9 /* MusicVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465DECD1CE0A55B000B92E9 /* MusicVideo.swift */; };
+		C47CD7361DA3C1CD004F0D00 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C47CD7351DA3C1CD004F0D00 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,9 @@
 		C465291C1CD8B17C0064A6E2 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C465DECB1CE0A32E000B92E9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C465DECD1CE0A55B000B92E9 /* MusicVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideo.swift; sourceTree = "<group>"; };
+		C47CD7331DA3C1CC004F0D00 /* MusicVideo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicVideo-Bridging-Header.h"; sourceTree = "<group>"; };
+		C47CD7341DA3C1CD004F0D00 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C47CD7351DA3C1CD004F0D00 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		C46528E81CD8AB480064A6E2 /* MusicVideo */ = {
 			isa = PBXGroup;
 			children = (
+				C47CD7321DA3C12E004F0D00 /* Obj-c */,
 				C465DECA1CE0A305000B92E9 /* Utils */,
 				C465291B1CD8AE520064A6E2 /* Supporting Files */,
 				C46529171CD8ADE90064A6E2 /* Model */,
@@ -172,6 +177,16 @@
 				C465DECB1CE0A32E000B92E9 /* Constants.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		C47CD7321DA3C12E004F0D00 /* Obj-c */ = {
+			isa = PBXGroup;
+			children = (
+				C47CD7341DA3C1CD004F0D00 /* Reachability.h */,
+				C47CD7351DA3C1CD004F0D00 /* Reachability.m */,
+				C47CD7331DA3C1CC004F0D00 /* MusicVideo-Bridging-Header.h */,
+			);
+			name = "Obj-c";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +327,7 @@
 				C46528EC1CD8AB480064A6E2 /* ViewController.swift in Sources */,
 				C465DECE1CE0A55B000B92E9 /* MusicVideo.swift in Sources */,
 				C46528EA1CD8AB480064A6E2 /* AppDelegate.swift in Sources */,
+				C47CD7361DA3C1CD004F0D00 /* Reachability.m in Sources */,
 				C465DECC1CE0A32E000B92E9 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,10 +472,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MusicVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Mitus.MusicVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicVideo/MusicVideo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -467,10 +486,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MusicVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Mitus.MusicVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicVideo/MusicVideo-Bridging-Header.h";
 			};
 			name = Release;
 		};
